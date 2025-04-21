@@ -1,0 +1,17 @@
+@import "./fonts/fonts.css";
+
+/* 기본 테마(dark) */
+:root {
+    --bg-color: #222;
+    --basic-text-color: #fff;
+    --black2: #222;
+    --black3: #333;
+    --black4: #444;
+    --black5: #555;
+    --black6: #666;
+}
+
+/* 라이트 모드 */
+[data-theme='light'] {
+    --bg-color: #fff;
+}

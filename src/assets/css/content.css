@@ -1,0 +1,70 @@
+/********************** 메인 > 상단 날씨 정보 **********************/
+.top-weather-info-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.top-weather-info-box .left {
+    width: 67px;
+}
+
+.top-weather-info-box .left .weather-icon {
+    width: 100%;
+    height: 67px;
+    border-radius: 100%;
+    background: #f9f9f9;
+}
+
+.top-weather-info-box .left strong {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px 0;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50px;
+    background: var(--black3);
+}
+
+.top-weather-info-box .left strong > span {
+    font-weight: 300;
+}
+
+.top-weather-info-box .right .location {
+    font-size: 15px;
+}
+
+.top-weather-info-box .right > strong {
+    display: block;
+    margin-top: 10px;
+    line-height: 32px;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+/********************** 노래 카드 **********************/
+.music-card .img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.music-card .text {
+    margin-top: 14px;
+}
+
+.music-card .text > strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.music-card .text > p {
+    font-weight: 300;
+    font-size: 15px;
+}
