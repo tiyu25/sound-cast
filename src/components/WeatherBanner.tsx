@@ -1,23 +1,8 @@
-import { useEffect, useState } from "react";
-import { getWeather } from "../api/WeatherService";
-import { WeatherResponse } from "../types/weather";
+import useWeather from "../hooks/useWeather";
+import { mapWeatherCondition } from "../utils/mapWeatherCondition";
 
 const WeatherBanner = (): JSX.Element => {
-    const [ weather, setWeather ] = useState<WeatherResponse | null>(null);
-
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                const { latitude, longitude } = position.coords;
-                try {
-                    const data = await getWeather(latitude, longitude);
-                    setWeather(data);
-                } catch (e) {
-                    console.error("날씨 정보를 불러오는데 실패했습니다.", e);
-                }
-            }
-        )
-    }, []);
+    const { weather } = useWeather();
 
     return (
         <div className={`weather-banner`}>
@@ -36,7 +21,7 @@ const WeatherBanner = (): JSX.Element => {
                 </button>
             </div>
             <div className="bottom">
-                <span>{weather?.condition}</span>
+                <span>{mapWeatherCondition(weather?.condition)}</span>
                 <strong>{weather?.temperature.toFixed(0)}°</strong>
             </div>
         </div>

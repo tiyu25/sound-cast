@@ -1,18 +1,26 @@
 import MusicCardList from "../components/MusicCardList";
+import useWeather from "../hooks/useWeather";
+import { getWeatherMessage } from "../utils/getWeatherMessage";
+import { mapWeatherCondition } from "../utils/mapWeatherCondition";
 
 const Main = (): JSX.Element => {
+    const { weather, error } = useWeather();
+
     return (
         <>
-            <div className="top-weather-info-box">
-                <div className="left">
-                    <div className="weather-icon"></div>
-                    <strong><span>흐림</span> 9°</strong>
+            {error && <p>{error}</p>}
+            {weather && (
+                <div className="top-weather-info-box">
+                    <div className="left">
+                        <div className="weather-icon"></div>
+                        <strong><span>{mapWeatherCondition(weather.condition)}</span> {weather?.temperature.toFixed(0)}°</strong>
+                    </div>
+                    <div className="right">
+                        <p className="location">{weather.city}</p>
+                        <strong>{getWeatherMessage(weather.condition)}</strong>
+                    </div>
                 </div>
-                <div className="right">
-                    <p className="location">충청북도 청주시</p>
-                    <strong>집 밖은 위험해! <br />날씨가 나빠요</strong>
-                </div>
-            </div>
+            )}
             <MusicCardList />
         </>
     )
