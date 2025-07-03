@@ -13,8 +13,6 @@ const useWeather = () => {
                 try {
                     const data = await getWeather(latitude, longitude);
                     setWeather(data);
-
-                    console.log(data);
                 } catch (e) {
                     console.error("날씨 정보를 불러오는데 실패했습니다.", e);
                     setError("날씨 정보를 불러오는데 실패했습니다.");

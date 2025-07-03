@@ -1,19 +1,16 @@
 import { Outlet } from "react-router";
-import Sidebar from "./Sidebar";
 import Header from "./Header";
 
-const BasicLayout = (): JSX.Element => {
+const TopLayout = () => {
     return (
-        <div>
+        <>
             <Header />
-            <Sidebar />
-            <div id="content-wrapper" className="basic-layout">
+            <div id="content-wrapper" className="top-layout">
                 <div className="con-body">
                     <Outlet />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
-
-export default BasicLayout;
+export default TopLayout;

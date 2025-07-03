@@ -44,27 +44,34 @@
     font-size: 27px;
 }
 
-/********************** 노래 카드 **********************/
-.music-card .img {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #f9f9f9;
+/********************** 로그인 **********************/
+.login-form-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
 }
-
-.music-card .text {
-    margin-top: 14px;
+.login-form-box .logo {
+    margin-bottom: 30px;
+    text-align: center;
 }
-
-.music-card .text > strong {
-    display: block;
-    margin-bottom: 8px;
+.login-form-box .join-button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: var(--gray9);
+}
+.login-form-box .join-button a {
     font-weight: 600;
-    font-size: 20px;
+    color: var(--basic-text-color);
+    border-bottom: 1px solid #fff;
 }
 
-.music-card .text > p {
-    font-weight: 300;
-    font-size: 15px;
+/********************** 회원가입 **********************/
+.login-form-box.join form {
+    margin-top: 30px;
 }

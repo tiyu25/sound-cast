@@ -1,4 +1,3 @@
-import MusicCardList from "../components/MusicCardList";
 import useWeather from "../hooks/useWeather";
 import { getWeatherMessage } from "../utils/getWeatherMessage";
 import { mapWeatherCondition } from "../utils/mapWeatherCondition";
@@ -21,7 +20,6 @@ const Main = (): JSX.Element => {
                     </div>
                 </div>
             )}
-            <MusicCardList />
         </>
     )
 }

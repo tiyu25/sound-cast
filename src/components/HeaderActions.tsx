@@ -24,7 +24,7 @@ const HeaderActions = (): JSX.Element => {
                 </svg>
                 화면 모드 변경
             </button>
-            <Link to="/" className="login-btn">로그인</Link>
+            <Link to="/login" className="login-btn">로그인</Link>
         </div>
     )
 }
