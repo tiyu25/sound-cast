@@ -1,6 +1,17 @@
 import { Link } from "react-router";
+import { useAuth } from "../contexts/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 const HeaderActions = (): JSX.Element => {
+    const { user, isLoading } = useAuth();
+
+    // 로그아웃
+    const handleLogout = async () => {
+        await signOut(auth);
+        alert("로그아웃 되었습니다.");
+    }
+
     return (
         <div className="header-actions">
             <button type="button" className="mode-btn">
@@ -24,7 +35,22 @@ const HeaderActions = (): JSX.Element => {
                 </svg>
                 화면 모드 변경
             </button>
-            <Link to="/login" className="login-btn">로그인</Link>
+            {!isLoading && (
+                <>
+                    {user ? (
+                        <button
+                            className="login-btn"
+                            onClick={handleLogout}
+                        >
+                            로그아웃
+                        </button>
+                    ):(
+                        <Link to="/login" className="login-btn">로그인</Link>
+                    )}
+                </>
+            )}
+
+
         </div>
     )
 }

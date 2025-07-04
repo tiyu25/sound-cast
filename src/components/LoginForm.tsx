@@ -21,6 +21,7 @@ const LoginForm = () => {
 
         try {
             await login(email, password);
+            alert("로그인 성공");
             // 로그인 성공 시 메인으로 이동
             navigate("/");
         } catch(e) {

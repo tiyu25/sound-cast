@@ -171,8 +171,8 @@
 
 .header-actions .login-btn {
     display: block;
-    width: 63px;
-    padding: 7px 0;
+    line-height: normal;
+    padding: 7px 12px;
     font-weight: 500;
     font-size: 15px;
     text-align: center;
