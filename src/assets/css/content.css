@@ -75,3 +75,18 @@
 .login-form-box.join form {
     margin-top: 30px;
 }
+.login-form-box .password-check p {
+    padding-left: 17px;
+    font-weight: 500;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.login-form-box .password-check p.match {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10" fill="none"><path d="M4.24667 9.86364L0.13 5.54546C-0.0433333 5.36364 -0.0433333 5.04545 0.13 4.81818L0.78 4.13636C0.953333 3.95455 1.25667 3.95455 1.47333 4.13636L4.59333 7.40909L11.5267 0.136364C11.7 -0.0454545 12.0033 -0.0454545 12.22 0.136364L12.87 0.818182C13.0433 1 13.0433 1.31818 12.87 1.54545L4.94 9.86364C4.72333 10.0455 4.42 10.0455 4.24667 9.86364Z" fill="%2300FFA3"/></svg>');
+    color: var(--main-color);
+}
+.login-form-box .password-check p.unmatch {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M13 1.45666L11.5433 0L6.5 5.04334L1.45666 0L0 1.45666L5.04334 6.5L0 11.5433L1.45666 13L6.5 7.95666L11.5433 13L13 11.5433L7.95666 6.5L13 1.45666Z" fill="%23FF4952"/></svg>');
+    color: var(--red-color);
+}

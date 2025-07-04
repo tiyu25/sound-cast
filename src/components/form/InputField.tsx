@@ -14,7 +14,7 @@ interface InputFieldProps {
 }
 const InputField = ({ label, labelFor, labelClassName="", type="text", id, name, placeholder, value, inputClassName="", boxClassName="", children, onChange }: InputFieldProps) => {
     return (
-        <div className={`${boxClassName}`}>
+        <div className={`mb8 ${boxClassName}`}>
             { label && <label htmlFor={labelFor} className={labelClassName}>{label}</label> }
             <div>
                 <input
@@ -23,7 +23,7 @@ const InputField = ({ label, labelFor, labelClassName="", type="text", id, name,
                     name={name}
                     placeholder={placeholder}
                     value={value}
-                    className={inputClassName}
+                    className={`${inputClassName}`}
                     onChange={onChange}
                 />
                 { children && <div>{children}</div> }
